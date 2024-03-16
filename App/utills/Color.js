@@ -1,4 +1,5 @@
 export default{
+    PRIMARY:'#8E3FFF',
     Black:'#000',
     Red: '#FF0000',
     Blue: '#0000FF',
@@ -8,4 +9,7 @@ export default{
     Orange: '#FFA500',
     Pink: '#FFC0CB',
     Brown: '#A52A2A',
+    White:'#FFFFFF',
+    
+
 } 
