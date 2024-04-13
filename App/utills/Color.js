@@ -10,4 +10,5 @@ export default {
   Pink: "#FFC0CB",
   Brown: "#A52A2A",
   White: "#FFFFFF",
+  LIGHT_GREY:'#EDEDED',
 };
