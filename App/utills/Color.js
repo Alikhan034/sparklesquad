@@ -1,5 +1,6 @@
 export default {
-  PRIMARY: "#8E3FFF",
+  PRIMARY: "#94B1FF",
+  PRIMARY_LIGHT: "#E1E9FF",
   Black: "#000",
   Red: "#FF0000",
   Blue: "#0000FF",
@@ -10,5 +11,5 @@ export default {
   Pink: "#FFC0CB",
   Brown: "#A52A2A",
   White: "#FFFFFF",
-  LIGHT_GREY:'#EDEDED',
+  GREY: '#535353',
 };
