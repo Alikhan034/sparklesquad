@@ -12,7 +12,7 @@ export default function BusinessList() {
     getBusinessList();
   }, [])
 
-
+// get business list from api
   const getBusinessList = () => {
     GlobalApi.getBusinessList().then(resp => {
       console.log(resp);
