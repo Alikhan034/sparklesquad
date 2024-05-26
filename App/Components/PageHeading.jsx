@@ -9,6 +9,7 @@ export default function PageHeading({title}) {
     <View>
      <TouchableOpacity
         style={{
+          
           display: "flex",
           flexDirection: "row",
           gap: 10,
