@@ -1,20 +1,21 @@
-import { View, Text ,Image ,StyleSheet,TouchableOpacity} from 'react-native'
+import { View, Text ,Image ,StyleSheet,TouchableOpacity, TextComponent} from 'react-native'
 import React from 'react'
 import Color from '../../utills/Color'
 import { Ionicons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 
-export default function BusinessListItem({business}) {
+export default function BusinessListItem({business,booking}) {
     const navigation=useNavigation();
   return (
    <TouchableOpacity style={styles.container} onPress={()=>navigation.push('business-detail',{business:business})}>
     <Image source={{uri:business?.image[0]?.url}} style={styles.image} />
     <View style={styles.subcontainer}>
-        <Text style={{fontFamily:'outfit',color:Color.GREY,fontSize:15,}}>{business.contactPerson}</Text>
-        <Text style={{fontFamily:'outfit-bold',fontSize:19,}}>{business.name}</Text>
+        <Text style={{fontFamily:'outfit',color:Color.GREY,fontSize:15,}}>{business?.contactPerson}</Text>
+        <Text style={{fontFamily:'outfit-bold',fontSize:19,}}>{business?.name}</Text>
         <Text style={{fontFamily:'outfit',color:Color.GREY,fontSize:16,}}>
         <Ionicons name="location-sharp" size={20} color={Color.PRIMARY} />
-            {business.address}</Text>
+            {business?.address}</Text>
+            {booking?.id?<Text>Show Booking</Text>:null}
 
     </View>
    
