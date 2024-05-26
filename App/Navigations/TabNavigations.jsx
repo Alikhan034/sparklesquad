@@ -9,6 +9,7 @@ import { Feather } from "@expo/vector-icons";
 import { AntDesign } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
 import HomeNavigation from "./HomeNavigation";
+import BookingNavigation from "./BookingNavigation";
 
 const Tab = createBottomTabNavigator();
 export default function TabNavigations() {
@@ -35,7 +36,7 @@ export default function TabNavigations() {
       />
       <Tab.Screen
         name="booking"
-        component={BookingScreen}
+        component={BookingNavigation}
         options={{
           tabBarLabel: ({ Color }) => (
             <Text style={{ color: Color, fontSize: 12, marginTop: -7 }}>
