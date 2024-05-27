@@ -27,7 +27,7 @@ export default function Categories() {
         onPress={()=>navigation.push('business-list',{category:item.name})}>
           <View style={styles.iconContainer}>
             <Image source={{uri:item?.icon?.url}}
-            style={{width:30,height:30}}
+            style={{width:60,height:60, borderRadius:10}}
             
             />
           </View>

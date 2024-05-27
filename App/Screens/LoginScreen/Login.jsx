@@ -27,7 +27,7 @@ export default function Login() {
   return (
     <View style={{ alignItems: "center" }}>
       <Image
-        source={require("./../../../assets/images/loginimage.jpg")}
+        source={require("./../../../assets/images/loginimage.png")}
         style={Styles.loginimg}
       />
       <View style={Styles.subContainer}>
@@ -58,18 +58,18 @@ export default function Login() {
 }
 const Styles = StyleSheet.create({
   loginimg: {
-    width: 230,
+    width: "100%",
     height: 450,
     marginTop: 70,
     borderWidth: 4,
-    borderColor: Color.PRIMARY,
+    
     borderRadius: 15,
   },
   subContainer: {
     width: "100%",
     backgroundColor: Color.PRIMARY,
-    height: "70%",
-    marginTop: -20,
+    height: 260,
+    marginTop: 60,
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
     padding: 20,
