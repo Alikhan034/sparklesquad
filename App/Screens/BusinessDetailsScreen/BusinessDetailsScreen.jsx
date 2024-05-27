@@ -1,4 +1,4 @@
-import { View, Text, Image, StyleSheet, TouchableOpacity ,Modal} from "react-native";
+import { View, Text, Image, StyleSheet, TouchableOpacity ,Modal, Linking} from "react-native";
 import React, { useEffect, useState } from "react";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { ScrollView } from "react-native";
@@ -15,7 +15,11 @@ export default function () {
   const [showModal,setShowModal]=useState(false);
     const navigation = useNavigation();
   useEffect(() => {}, []);
-  return (
+
+  const onMessageBtnClick=()=>{
+    Linking.openURL('mailto:'+business?.email+"?subject= I am looking for your services&body=Hi there,");
+  }
+  return  business&&(
     <View>
       <ScrollView style={{ height: "92%" }}>
         <TouchableOpacity
@@ -115,7 +119,7 @@ export default function () {
         </View>
       </ScrollView>
       <View style={{ display: "flex", flexDirection: "row",margin:5,gap:8, }}>
-        <TouchableOpacity style={styles.msgbtn}>
+        <TouchableOpacity onPress={()=>onMessageBtnClick()} style={styles.msgbtn}>
           <Text
             style={{
               textAlign: "center",
